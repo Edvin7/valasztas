@@ -1,0 +1,194 @@
+/* Alap stílusok a body-hoz */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+/* A szekció stílusa */
+.signup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f8f8f8;
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.signup-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 900px;
+    padding: 50px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+}
+
+.signup-image {
+    flex: 1;
+    max-width: 400px;
+    text-align: center;
+}
+
+.signup-image figure {
+    margin: 0;
+}
+
+.signup-image img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+}
+
+.signup-form {
+    flex: 1;
+    max-width: 500px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Input mezők */
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    display: block;
+    border: none;
+    border-bottom: 2px solid #ccc; /* Alapértelmezett alul vonal */
+    padding: 6px 30px;
+    outline: none;
+    font-family: Poppins;
+    padding-left: 40px; /* Az ikonokhoz helyet biztosít */
+    transition: border-bottom 0.3s ease; /* Lassan változik a vonal */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-bottom: 2px solid #033473; /* Kék vonal fókuszáláskor */
+}
+
+label {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%); /* Vertikálisan középre igazítja a label-t */
+    font-size: 1rem;
+    color: black;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+input[type="text"]:focus + label,
+input[type="email"]:focus + label,
+input[type="password"]:focus + label {
+    top: -10px;
+    font-size: 0.9rem;
+    color: #6e7dff;
+}
+
+/* Checkbox */
+.form-group.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px; /* Több távolság a checkbox és a gomb között */
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.label-agree-term {
+    font-size: 0.9rem;
+    color: #555;
+    margin-left: 5px; /* Kis távolság a checkbox-tól */
+}
+
+/* Gomb */
+.form-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Növeld ezt a távolságot, hogy több hely legyen */
+}
+
+.form-submit {
+    display: inline-block;
+    background: #033473;
+    color: #fff;
+    border: none;
+    width: auto;
+    padding: 15px 39px;
+    border-radius: 5px;
+    margin-top: 25px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.form-submit:hover {
+    background: white;
+    color: #033473;
+    text-decoration: none;
+    transition: 0.3s ease all;
+    border: 1px solid #033473;
+}
+
+/* Linkek */
+.signup-image-link {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #6e7dff;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.signup-image-link:hover {
+    text-decoration: underline;
+}
+
+/* Reszponzív módosítások */
+@media (max-width: 768px) {
+    .signup-content {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .signup-image {
+        margin-bottom: 20px;
+    }
+
+    .signup-form {
+        max-width: 100%;
+    }
+}

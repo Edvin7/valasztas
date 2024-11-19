@@ -1,0 +1,125 @@
+/* Alap navbar stílus */
+nav {
+  padding: 5px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+nav .logo {
+  display: flex;
+  align-items: center;
+}
+
+nav .logo img {
+  height: 70px;
+  width: auto;
+  margin-right: 10px;
+}
+
+/* Menüpontok alapértelmezetten */
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 1.5rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 95%;
+  font-weight: 400;
+  padding: 4px 8px;
+  border-radius: 5px;
+}
+
+nav ul li a:hover {
+  background-color: #f5f5f5;
+}
+
+/* Login button */
+.loginbutton {
+  background: #033473;
+  color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-weight: bold;
+}
+
+.loginbutton:hover {
+  background: white;
+  color: #033473;
+}
+
+/* Hamburger ikon stílus */
+.hamburger-icon {
+  display: none; /* Mobil nézetben jelenjen meg */
+  flex-direction: column;
+  justify-content: space-between;
+  height: 25px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.hamburger-icon .bar {
+  height: 4px;
+  width: 100%;
+  background-color: #000;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Ha a menü nyitva van, a hamburger ikon átalakul */
+.hamburger-icon .bar.open:nth-child(1) {
+  transform: rotate(45deg) translateY(7px);
+}
+
+.hamburger-icon .bar.open:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icon .bar.open:nth-child(3) {
+  transform: rotate(-45deg) translateY(-7px);
+}
+
+/* Mobil nézetben a menüpontok legyenek elrejtve alapból */
+.nav-links {
+  display: flex;
+}
+
+.nav-links ul {
+  display: flex;
+}
+
+.nav-links.active ul {
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 5%;
+  background-color: white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.nav-links li {
+  margin: 1rem 0;
+}
+
+/* Mobil nézetben a hamburger ikon jelenjen meg */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none; /* Alapértelmezetten rejtve */
+  }
+
+  .hamburger-icon {
+    display: flex; /* Mobil nézetben látható */
+  }
+
+  /* A navigációs menü elemei, amikor aktív (hamburger menü nyitva) */
+  .nav-links.active {
+    display: block;
+  }
+}
